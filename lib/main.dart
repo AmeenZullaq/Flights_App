@@ -1,9 +1,9 @@
 import 'package:flights_app/core/utils/helper_functions/app_routes.dart';
-import 'package:flights_app/features/flights/presentation/views/flights_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'core/utils/helper_functions/get_theme_data.dart';
+import 'features/profile/presentation/views/profile_view.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -28,12 +28,9 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           routes: appRoutes,
           theme: getThemeData(),
-          home: const FlightsView(),
+          home: const ProfileView(),
         );
       },
     );
   }
 }
-
-
-

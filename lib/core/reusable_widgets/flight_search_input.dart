@@ -1,5 +1,5 @@
 import 'package:flights_app/core/utils/constants/app_colors.dart';
-import 'package:flights_app/core/utils/constants/app_styles.dart';
+import 'package:flights_app/core/utils/constants/app_shadows.dart';
 import 'package:flights_app/core/reusable_widgets/app_container.dart';
 import 'package:flights_app/core/reusable_widgets/app_text_field.dart';
 import 'package:flutter/material.dart';
@@ -38,7 +38,7 @@ class FlightSearchInput extends StatelessWidget {
           rightPadding: 16,
           topLeftRadius: 8,
           topRightRadius: 8,
-          boxShadow: AppStyles.textFieldShadow,
+          boxShadow: AppShadows.textFieldShadow,
           child: AppTextField(
             onTap: firstOnTap,
             readOnly: true,
@@ -55,7 +55,7 @@ class FlightSearchInput extends StatelessWidget {
           rightPadding: 16,
           bottomLeftRadius: 8,
           bottomRightRadius: 8,
-          boxShadow: AppStyles.textFieldShadow,
+          boxShadow: AppShadows.textFieldShadow,
           child: AppTextField(
             onTap: secondOnTap,
             readOnly: true,

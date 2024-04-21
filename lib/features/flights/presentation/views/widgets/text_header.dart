@@ -18,7 +18,9 @@ class TextHeader extends StatelessWidget {
         ),
         Text(
           'with other passengers',
-          style: AppStyles.styleBold24,
+          style: AppStyles.styleBold24.copyWith(
+            color: AppColors.grey700,
+          ),
         ),
       ],
     );

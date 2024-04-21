@@ -52,7 +52,7 @@ class AppTextField extends StatelessWidget {
         suffixIcon: suffixWidget,
         hintText: hintText,
         hintStyle: AppStyles.styleRegular14.copyWith(
-          color: hintTextColor ?? const Color(0xFF98A2B3),
+          color: hintTextColor ?? AppColors.grey400,
         ),
         prefixIconConstraints: const BoxConstraints(
           minHeight: 24,

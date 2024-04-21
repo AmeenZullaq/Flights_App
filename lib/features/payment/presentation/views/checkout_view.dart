@@ -21,7 +21,9 @@ class CheckoutView extends StatelessWidget {
         elevation: 0,
         title: Text(
           'Payment',
-          style: AppStyles.styleMedium16,
+          style: AppStyles.styleMedium16.copyWith(
+            color: AppColors.grey800,
+          ),
         ),
       ),
       body: PaddingDynamic(
@@ -49,7 +51,9 @@ class CheckoutView extends StatelessWidget {
                 children: [
                   Text(
                     '4500 0910 4334 3443',
-                    style: AppStyles.styleMedium16,
+                    style: AppStyles.styleMedium16.copyWith(
+                      color: AppColors.grey800,
+                    ),
                   ),
                   SvgPicture.asset(
                     Assets.imagesPaymentMethods,
@@ -81,7 +85,9 @@ class CheckoutView extends StatelessWidget {
                     ),
                     child: Text(
                       '10/3',
-                      style: AppStyles.styleMedium16,
+                      style: AppStyles.styleMedium16.copyWith(
+                        color: AppColors.grey800,
+                      ),
                     ),
                   ),
                 ),
@@ -123,8 +129,11 @@ class CheckoutView extends StatelessWidget {
                   value: true,
                   onChanged: (value) {},
                 ),
-                const Text(
+                Text(
                   'Save card',
+                  style: AppStyles.styleRegular14.copyWith(
+                    color: AppColors.grey800,
+                  ),
                 ),
               ],
             ),

@@ -18,7 +18,9 @@ class ExtremeAirplaneText extends StatelessWidget {
         ),
         Text(
           'airplane flight',
-          style: AppStyles.styleBold30,
+          style: AppStyles.styleBold30.copyWith(
+            color: AppColors.grey700,
+          ),
         ),
       ],
     );

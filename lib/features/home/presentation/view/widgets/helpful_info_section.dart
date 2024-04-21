@@ -1,3 +1,4 @@
+import 'package:flights_app/core/utils/constants/app_colors.dart';
 import 'package:flights_app/core/utils/constants/app_styles.dart';
 import 'package:flights_app/core/reusable_widgets/app_container.dart';
 import 'package:flights_app/features/home/presentation/view/widgets/helpful_info_list_view.dart';
@@ -23,7 +24,9 @@ class HelpfulInfoSection extends StatelessWidget {
         children: [
           Text(
             'Helpful information',
-            style: AppStyles.styleBold20,
+            style: AppStyles.styleBold20.copyWith(
+              color: AppColors.grey800,
+            ),
           ),
           SizedBox(
             height: 24.h,

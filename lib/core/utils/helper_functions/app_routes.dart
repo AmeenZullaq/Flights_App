@@ -7,10 +7,10 @@ import 'package:flights_app/features/payment/presentation/views/checkout_view.da
 import 'package:flights_app/features/payment/presentation/views/success_payment_view.dart';
 import 'package:flights_app/features/flights/presentation/views/flights_view.dart';
 import 'package:flights_app/features/home/presentation/view/main_view.dart';
-import 'package:flights_app/features/search_result/presentation/views/air_tour_details_view.dart';
-import 'package:flights_app/features/search_result/presentation/views/air_tours_result_view.dart';
-import 'package:flights_app/features/search_result/presentation/views/flights_details_view.dart';
-import 'package:flights_app/features/search_result/presentation/views/reviews_view.dart';
+import 'package:flights_app/features/flights_search_result/presentation/views/air_tour_details_view.dart';
+import 'package:flights_app/features/flights_search_result/presentation/views/air_tours_result_view.dart';
+import 'package:flights_app/features/flights_search_result/presentation/views/flights_details_view.dart';
+import 'package:flights_app/features/flights_search_result/presentation/views/reviews_view.dart';
 import 'package:flutter/material.dart';
 
 Map<String, Widget Function(BuildContext)> appRoutes = {

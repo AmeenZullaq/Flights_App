@@ -2,7 +2,7 @@ import 'package:flights_app/core/reusable_widgets/app_container.dart';
 import 'package:flights_app/core/reusable_widgets/app_text_field.dart';
 import 'package:flights_app/core/utils/constants/app_colors.dart';
 import 'package:flights_app/core/utils/constants/app_images.dart';
-import 'package:flights_app/core/utils/constants/app_styles.dart';
+import 'package:flights_app/core/utils/constants/app_shadows.dart';
 import 'package:flights_app/core/utils/helper_functions/get_bottom_sheet.dart';
 import 'package:flights_app/features/home/presentation/view/widgets/date_bottom_sheet.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +20,7 @@ class ArrivalForm extends StatelessWidget {
       topRightRadius: 8,
       bottomLeftRadius: 8,
       bottomRightRadius: 8,
-      boxShadow: AppStyles.textFieldShadow,
+      boxShadow: AppShadows.textFieldShadow,
       child: AppTextField(
         readOnly: true,
         enabledBorderSideColor: AppColors.white,

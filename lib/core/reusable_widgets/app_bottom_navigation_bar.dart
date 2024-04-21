@@ -1,4 +1,5 @@
 import 'package:flights_app/core/utils/constants/app_colors.dart';
+import 'package:flights_app/core/utils/constants/app_shadows.dart';
 import 'package:flights_app/core/utils/constants/app_styles.dart';
 import 'package:flights_app/core/utils/helper_functions/bottom_navigation_bar_items.dart';
 import 'package:flutter/material.dart';
@@ -16,14 +17,7 @@ class AppBottomNavigationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            blurRadius: 20,
-            spreadRadius: 0,
-            offset: const Offset(0, 3),
-            color: const Color(0xFF475159).withOpacity(0.15),
-          ),
-        ],
+        boxShadow: AppShadows.navigationBarShadow,
       ),
       height: MediaQuery.sizeOf(context).height * .11,
       child: Theme(
