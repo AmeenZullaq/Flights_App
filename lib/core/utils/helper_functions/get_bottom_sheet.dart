@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 
 Future<dynamic> getBottomSheet(
   BuildContext context, {
-  TextEditingController? controller,
   required Widget child,
+  double? height,
 }) {
   return showModalBottomSheet(
     context: context,
@@ -13,7 +13,7 @@ Future<dynamic> getBottomSheet(
     isScrollControlled: true,
     builder: (context) {
       return SizedBox(
-        height: MediaQuery.sizeOf(context).height * .85,
+        height: height ?? MediaQuery.sizeOf(context).height * .85,
         child: PaddingSymetric(
           horizontal: 20,
           vertical: 20,

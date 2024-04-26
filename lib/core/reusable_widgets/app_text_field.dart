@@ -1,6 +1,7 @@
 import 'package:flights_app/core/reusable_widgets/padding.dart';
 import 'package:flights_app/core/utils/constants/app_styles.dart';
 import 'package:flights_app/core/utils/constants/app_colors.dart';
+import 'package:flights_app/core/utils/helper_functions/theme_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -59,11 +60,11 @@ class AppTextField extends StatelessWidget {
           minWidth: 24,
         ),
         alignLabelWithHint: true,
-        enabledBorder: AppStyles.outLineInputBorder(
+        enabledBorder: outLineInputBorder(
           borderSideColor: enabledBorderSideColor,
           borderRadius: borderRadius,
         ),
-        focusedBorder: AppStyles.outLineInputBorder(
+        focusedBorder: outLineInputBorder(
           borderSideColor: focusedBorderSideColor,
           borderRadius: borderRadius,
         ),

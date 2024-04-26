@@ -2,8 +2,9 @@ import 'package:flights_app/core/reusable_widgets/app_button.dart';
 import 'package:flights_app/core/reusable_widgets/padding.dart';
 import 'package:flights_app/core/utils/constants/app_colors.dart';
 import 'package:flights_app/core/utils/constants/app_images.dart';
-import 'package:flights_app/core/utils/constants/route_views.dart';
+import 'package:flights_app/core/utils/constants/app_routes.dart';
 import 'package:flights_app/core/utils/constants/app_styles.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:svg_flutter/svg.dart';
@@ -15,6 +16,14 @@ class CheckoutView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(
+            CupertinoIcons.arrow_left,
+          ),
+        ),
         backgroundColor: AppColors.white,
         surfaceTintColor: AppColors.white,
         centerTitle: true,
@@ -143,7 +152,7 @@ class CheckoutView extends StatelessWidget {
             AppButton(
               text: 'pay',
               onTap: () {
-                Navigator.pushNamed(context, RouteViews.successPaymentView);
+                Navigator.pushNamed(context, Routes.successPaymentView);
               },
             )
           ],

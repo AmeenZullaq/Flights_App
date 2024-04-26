@@ -1,4 +1,5 @@
 import 'package:flights_app/core/utils/constants/app_styles.dart';
+import 'package:flights_app/core/utils/helper_functions/theme_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
@@ -13,10 +14,10 @@ class PhoneFieldWidget extends StatelessWidget {
       decoration: InputDecoration(
         contentPadding: const EdgeInsets.symmetric(vertical: 15),
         hintStyle: AppStyles.styleMedium16,
-        enabledBorder: AppStyles.outLineInputBorder(
+        enabledBorder: outLineInputBorder(
           borderRadius: BorderRadius.circular(8),
         ),
-        focusedBorder: AppStyles.outLineInputBorder(
+        focusedBorder: outLineInputBorder(
           borderRadius: BorderRadius.circular(8),
         ),
       ),

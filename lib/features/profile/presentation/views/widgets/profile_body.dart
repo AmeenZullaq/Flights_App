@@ -1,4 +1,4 @@
-import 'package:flights_app/core/reusable_widgets/app_container.dart';
+import 'package:flights_app/features/profile/presentation/views/widgets/profile_options.dart';
 import 'package:flights_app/features/profile/presentation/views/widgets/user_info.dart';
 import 'package:flutter/material.dart';
 
@@ -9,14 +9,11 @@ class ProfileBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        AppContainer(
-          width: double.infinity,
-          bottomLeftRadius: 16,
-          bottomRightRadius: 16,
-          bottomPadding: 40,
-          topPadding: 50,
-          child: UserInfo(),
+        UserInfo(),
+        SizedBox(
+          height: 16,
         ),
+        ProfileOptions(),
       ],
     );
   }

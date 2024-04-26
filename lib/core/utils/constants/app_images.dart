@@ -5,9 +5,21 @@ class Assets {
   /// assets/images/airplane.svg
   static const String imagesAirplane = "assets/images/airplane.svg";
 
+  /// Assets for imagesAirplaneBlue
+  /// assets/images/airplaneBlue.svg
+  static const String imagesAirplaneBlue = "assets/images/airplaneBlue.svg";
+
   /// Assets for imagesAirplaneTest
   /// assets/images/airplaneTest.jpg
   static const String imagesAirplaneTest = "assets/images/airplaneTest.jpg";
+
+  /// Assets for imagesAirplaneTilt
+  /// assets/images/AirplaneTilt.svg
+  static const String imagesAirplaneTilt = "assets/images/AirplaneTilt.svg";
+
+  /// Assets for imagesBellSimple
+  /// assets/images/BellSimple.svg
+  static const String imagesBellSimple = "assets/images/BellSimple.svg";
 
   /// Assets for imagesBlackStar
   /// assets/images/Black_Star.svg
@@ -21,9 +33,29 @@ class Assets {
   /// assets/images/card-tick.svg
   static const String imagesCardTick = "assets/images/card-tick.svg";
 
+  /// Assets for imagesChatCenteredDots
+  /// assets/images/ChatCenteredDots.svg
+  static const String imagesChatCenteredDots = "assets/images/ChatCenteredDots.svg";
+
   /// Assets for imagesCity5
   /// assets/images/city5.jpg
   static const String imagesCity5 = "assets/images/city5.jpg";
+
+  /// Assets for imagesCoinVertical
+  /// assets/images/CoinVertical.svg
+  static const String imagesCoinVertical = "assets/images/CoinVertical.svg";
+
+  /// Assets for imagesCreditCard
+  /// assets/images/CreditCard.svg
+  static const String imagesCreditCard = "assets/images/CreditCard.svg";
+
+  /// Assets for imagesFrame
+  /// assets/images/Frame.svg
+  static const String imagesFrame = "assets/images/Frame.svg";
+
+  /// Assets for imagesGlobeHemisphereWest
+  /// assets/images/GlobeHemisphereWest.svg
+  static const String imagesGlobeHemisphereWest = "assets/images/GlobeHemisphereWest.svg";
 
   /// Assets for imagesGps
   /// assets/images/gps.svg
@@ -32,6 +64,10 @@ class Assets {
   /// Assets for imagesGroup
   /// assets/images/Group.svg
   static const String imagesGroup = "assets/images/Group.svg";
+
+  /// Assets for imagesHandsClapping
+  /// assets/images/HandsClapping.svg
+  static const String imagesHandsClapping = "assets/images/HandsClapping.svg";
 
   /// Assets for imagesHeartStraight
   /// assets/images/HeartStraight.svg
@@ -61,9 +97,17 @@ class Assets {
   /// assets/images/MapPin.svg
   static const String imagesMapPin = "assets/images/MapPin.svg";
 
+  /// Assets for imagesNotification
+  /// assets/images/Notification.svg
+  static const String imagesNotification = "assets/images/Notification.svg";
+
   /// Assets for imagesPaymentMethods
   /// assets/images/payment-methods.svg
   static const String imagesPaymentMethods = "assets/images/payment-methods.svg";
+
+  /// Assets for imagesPerson
+  /// assets/images/person.png
+  static const String imagesPerson = "assets/images/person.png";
 
   /// Assets for imagesPlaneSvgrepoCom1
   /// assets/images/plane-svgrepo-com1.svg
@@ -77,6 +121,10 @@ class Assets {
   /// assets/images/routing.svg
   static const String imagesRouting = "assets/images/routing.svg";
 
+  /// Assets for imagesSettings
+  /// assets/images/Settings.svg
+  static const String imagesSettings = "assets/images/Settings.svg";
+
   /// Assets for imagesSlidersHorizontal
   /// assets/images/SlidersHorizontal.svg
   static const String imagesSlidersHorizontal = "assets/images/SlidersHorizontal.svg";
@@ -85,9 +133,17 @@ class Assets {
   /// assets/images/SmileyWink.svg
   static const String imagesSmileyWink = "assets/images/SmileyWink.svg";
 
-  /// Assets for imagesVector
-  /// assets/images/Vector.svg
-  static const String imagesVector = "assets/images/Vector.svg";
+  /// Assets for imagesTicketd
+  /// assets/images/Ticketd.svg
+  static const String imagesTicketd = "assets/images/Ticketd.svg";
+
+  /// Assets for imagesWind
+  /// assets/images/Wind.svg
+  static const String imagesWind = "assets/images/Wind.svg";
+
+  /// Assets for imagesXCircle
+  /// assets/images/XCircle.svg
+  static const String imagesXCircle = "assets/images/XCircle.svg";
 
   /// Assets for imagesYellowStar
   /// assets/images/Yellow_Star.svg

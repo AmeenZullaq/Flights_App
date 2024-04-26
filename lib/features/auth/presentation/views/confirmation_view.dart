@@ -1,9 +1,10 @@
 import 'package:flights_app/core/utils/constants/app_colors.dart';
 import 'package:flights_app/core/utils/constants/app_styles.dart';
 import 'package:flights_app/core/reusable_widgets/padding.dart';
-import 'package:flights_app/features/auth/presentation/views/widgets/confirmation_text_field.dart';
+import 'package:flights_app/core/utils/helper_functions/theme_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pinput/pinput.dart';
 
 class ConfirmationView extends StatelessWidget {
   const ConfirmationView({super.key});
@@ -32,15 +33,26 @@ class ConfirmationView extends StatelessWidget {
             SizedBox(
               height: 30.h,
             ),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                ConfirmatiomTextField(first: true, last: false),
-                ConfirmatiomTextField(first: false, last: false),
-                ConfirmatiomTextField(first: false, last: false),
-                ConfirmatiomTextField(first: false, last: false),
-                ConfirmatiomTextField(first: false, last: true),
-              ],
+            Pinput(
+              length: 5,
+              separatorBuilder: (index) {
+                return SizedBox(
+                  width: 12.w,
+                );
+              },
+              mainAxisAlignment: MainAxisAlignment.start,
+              defaultPinTheme: getPinTheme(
+                textColor: AppColors.grey800,
+                borderColor: AppColors.grey200,
+              ),
+              errorPinTheme: getPinTheme(
+                textColor: AppColors.error600,
+                borderColor: AppColors.error500,
+              ),
+              focusedPinTheme: getPinTheme(
+                textColor: AppColors.grey800,
+                borderColor: AppColors.blue,
+              ),
             ),
           ],
         ),

@@ -1,6 +1,6 @@
 import 'package:flights_app/core/reusable_widgets/padding.dart';
 import 'package:flights_app/core/utils/constants/app_colors.dart';
-import 'package:flights_app/core/utils/constants/route_views.dart';
+import 'package:flights_app/core/utils/constants/app_routes.dart';
 import 'package:flights_app/core/utils/constants/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,7 +16,7 @@ class AllReviewsButton extends StatelessWidget {
       right: 20,
       child: GestureDetector(
         onTap: () {
-          Navigator.pushNamed(context, RouteViews.reviewsView);
+          Navigator.pushNamed(context, Routes.reviewsView);
         },
         child: Container(
           alignment: Alignment.center,

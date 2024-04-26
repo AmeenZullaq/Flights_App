@@ -1,5 +1,5 @@
 import 'package:flights_app/core/utils/constants/app_colors.dart';
-import 'package:flights_app/core/utils/constants/route_views.dart';
+import 'package:flights_app/core/utils/constants/app_routes.dart';
 import 'package:flights_app/core/utils/constants/app_styles.dart';
 import 'package:flights_app/core/reusable_widgets/padding.dart';
 import 'package:flights_app/core/reusable_widgets/app_button.dart';
@@ -53,7 +53,7 @@ class PhoneNumberView extends StatelessWidget {
             AppButton(
               text: 'Next',
               onTap: () {
-                Navigator.pushNamed(context, RouteViews.enterNameView);
+                Navigator.pushNamed(context, Routes.enterNameView);
               },
             ),
             SizedBox(

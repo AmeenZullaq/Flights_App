@@ -4,6 +4,7 @@ import 'package:flights_app/core/utils/constants/app_images.dart';
 import 'package:flights_app/features/flights_search_result/presentation/views/widgets/flight_rating.dart';
 import 'package:flights_app/features/flights_search_result/presentation/views/widgets/airfield_name.dart';
 import 'package:flights_app/features/flights_search_result/presentation/views/widgets/passengers_number.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:svg_flutter/svg.dart';
@@ -43,7 +44,7 @@ class FlightImage extends StatelessWidget {
                       Navigator.pop(context);
                     },
                     icon: const Icon(
-                      Icons.arrow_back,
+                      CupertinoIcons.arrow_left,
                       color: AppColors.white,
                     ),
                   ),

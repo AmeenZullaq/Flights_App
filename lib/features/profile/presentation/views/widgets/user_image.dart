@@ -1,7 +1,8 @@
+import 'dart:io';
+import 'package:flights_app/core/reusable_widgets/padding.dart';
 import 'package:flights_app/core/utils/constants/app_colors.dart';
 import 'package:flights_app/core/utils/constants/app_images.dart';
 import 'package:flights_app/core/utils/constants/app_shadows.dart';
-import 'package:flights_app/core/utils/constants/app_styles.dart';
 import 'package:flights_app/core/utils/helper_functions/get_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -18,62 +19,93 @@ class UserImage extends StatefulWidget {
 
 class _UserImageState extends State<UserImage> {
   ImagePicker imagePicker = ImagePicker();
-  var image;
+  XFile? pickedImage;
+  File? image;
+
+  void onImagePicker() {}
   @override
   Widget build(BuildContext context) {
     return Stack(
       alignment: Alignment.bottomRight,
       children: [
-        image != null
+        image == null
             ? SizedBox(
                 height: 100.h,
                 width: 100.w,
-                child: CircleAvatar(
-                  backgroundImage: MemoryImage(image),
+                child: const CircleAvatar(
+                  backgroundImage: AssetImage(Assets.imagesPerson),
                 ),
               )
             : SizedBox(
                 height: 100.h,
                 width: 100.w,
-                child: const CircleAvatar(
-                  backgroundImage: AssetImage(Assets.imagesImages),
+                child: CircleAvatar(
+                  backgroundImage: FileImage(image!),
                 ),
               ),
         GestureDetector(
-          onTap: () async {
-            image = await imagePicker.pickImage(
-              source: ImageSource.gallery,
+          onTap: () {
+            getBottomSheet(
+              context,
+              height: MediaQuery.sizeOf(context).height * 0.3,
+              child: PaddingAll(
+                value: 20,
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: GestureDetector(
+                        onTap: () async {
+                          pickedImage = await imagePicker.pickImage(
+                            source: ImageSource.gallery,
+                          );
+                          if (pickedImage != null) {
+                            image = File(pickedImage!.path);
+                          }
+                          setState(() {
+                            Navigator.pop(context);
+                          });
+                        },
+                        child: Column(
+                          children: [
+                            Icon(
+                              Icons.image,
+                              size: 70.w,
+                              color: AppColors.blue,
+                            ),
+                            const Text('Gallery'),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: GestureDetector(
+                        onTap: () async {
+                          pickedImage = await imagePicker.pickImage(
+                            source: ImageSource.camera,
+                          );
+                          if (pickedImage != null) {
+                            image = File(pickedImage!.path);
+                          }
+                          setState(() {
+                            Navigator.pop(context);
+                          });
+                        },
+                        child: Column(
+                          children: [
+                            Icon(
+                              Icons.camera,
+                              size: 70.w,
+                              color: AppColors.blue,
+                            ),
+                            const Text('Camera'),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             );
-            setState(() {});
-            // getBottomSheet(
-            //   context,
-            //   child: Column(
-            //     children: [
-            //       Row(
-            //         children: [
-            //           Text(
-            //             'Add photo',
-            //             style: AppStyles.styleSemiBold18,
-            //           ),
-            //           IconButton(
-            //             onPressed: () {},
-            //             icon: Icon(
-            //               Icons.cancel,
-            //               color: Colors.grey[300],
-            //               size: 20,
-            //             ),
-            //             padding: EdgeInsets.zero,
-            //             visualDensity:
-            //                 const VisualDensity(horizontal: -4, vertical: -4),
-            //           ),
-            //         ],
-            //       ),
-            //       SizedBox(
-            //         height: 32.h,
-            //       ),
-            //     ],
-            //   ),
-            // );
           },
           child: Container(
             height: 28.h,
@@ -85,7 +117,7 @@ class _UserImageState extends State<UserImage> {
             ),
             child: Icon(
               Icons.edit,
-              size: 19.w,
+              size: 24.w,
             ),
           ),
         ),

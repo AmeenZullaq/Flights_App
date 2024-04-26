@@ -1,6 +1,6 @@
 import 'package:flights_app/core/reusable_widgets/app_button.dart';
 import 'package:flights_app/core/reusable_widgets/padding.dart';
-import 'package:flights_app/core/utils/constants/route_views.dart';
+import 'package:flights_app/core/utils/constants/app_routes.dart';
 import 'package:flights_app/features/flights/presentation/views/widgets/arrival_form.dart';
 import 'package:flights_app/features/flights/presentation/views/widgets/departure_form.dart';
 import 'package:flights_app/features/flights/presentation/views/widgets/passengers_form.dart';
@@ -47,7 +47,7 @@ class FlightsBody extends StatelessWidget {
           AppButton(
             text: 'Find',
             onTap: () {
-              Navigator.pushNamed(context, RouteViews.flightDetailsView);
+              Navigator.pushNamed(context, Routes.flightDetailsView);
             },
           ),
         ],

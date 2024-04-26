@@ -1,3 +1,4 @@
+import 'package:flights_app/core/reusable_widgets/app_container.dart';
 import 'package:flights_app/core/utils/constants/app_colors.dart';
 import 'package:flights_app/core/utils/constants/app_styles.dart';
 import 'package:flights_app/features/profile/presentation/views/widgets/user_image.dart';
@@ -9,26 +10,33 @@ class UserInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        const UserImage(),
-        SizedBox(
-          height: 16.h,
-        ),
-        Text(
-          'David J',
-          style: AppStyles.styleSemiBold24.copyWith(
-            color: AppColors.grey800,
+    return AppContainer(
+      width: double.infinity,
+      bottomLeftRadius: 16,
+      bottomRightRadius: 16,
+      bottomPadding: 40,
+      topPadding: 50,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const UserImage(),
+          SizedBox(
+            height: 16.h,
           ),
-        ),
-        Text(
-          '+1 555 555 55 55',
-          style: AppStyles.styleMedium14.copyWith(
-            color: const Color(0xFF667085),
+          Text(
+            'David J',
+            style: AppStyles.styleSemiBold24.copyWith(
+              color: AppColors.grey800,
+            ),
           ),
-        ),
-      ],
+          Text(
+            '+1 555 555 55 55',
+            style: AppStyles.styleMedium14.copyWith(
+              color: const Color(0xFF667085),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

@@ -10,9 +10,11 @@ class AppButton extends StatelessWidget {
     this.textColor = AppColors.white,
     required this.text,
     required this.onTap,
+    this.borderSideColor = AppColors.white,
   });
   final Color color;
   final Color textColor;
+  final Color borderSideColor;
   final String text;
   final Function() onTap;
 
@@ -27,6 +29,9 @@ class AppButton extends StatelessWidget {
         decoration: BoxDecoration(
           color: color,
           borderRadius: BorderRadius.circular(8),
+          border: Border.all(
+            color: borderSideColor,
+          ),
         ),
         child: Text(
           text,

@@ -36,7 +36,7 @@ class PaddingAll extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.all(value),
+      padding: EdgeInsetsDirectional.all(value.w),
       child: child,
     );
   }

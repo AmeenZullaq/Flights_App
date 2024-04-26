@@ -3,7 +3,7 @@ import 'package:flights_app/core/utils/constants/app_images.dart';
 import 'package:flights_app/core/utils/constants/app_styles.dart';
 import 'package:flights_app/core/utils/helper_functions/get_bottom_sheet.dart';
 import 'package:flights_app/features/flights_search_result/presentation/views/widgets/search_filter_bottom_sheet.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:svg_flutter/svg.dart';
 
@@ -19,7 +19,7 @@ class SearchFormHeader extends StatelessWidget {
             Navigator.pop(context);
           },
           child: const Icon(
-            Icons.arrow_back,
+            CupertinoIcons.arrow_left,
             size: 24,
           ),
         ),

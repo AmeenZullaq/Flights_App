@@ -1,4 +1,3 @@
-import 'package:flights_app/core/utils/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -11,9 +10,17 @@ abstract class AppStyles {
     fontWeight: FontWeight.w600,
     fontSize: 18.sp,
   );
+  static TextStyle styleSemiBold10 = TextStyle(
+    fontWeight: FontWeight.w600,
+    fontSize: 10.sp,
+  );
   static TextStyle styleSemiBold16 = TextStyle(
     fontWeight: FontWeight.w600,
     fontSize: 16.sp,
+  );
+  static TextStyle styleSemiBold17 = TextStyle(
+    fontWeight: FontWeight.w600,
+    fontSize: 17.sp,
   );
   static TextStyle styleRegular16 = TextStyle(
     fontWeight: FontWeight.w400,
@@ -55,6 +62,10 @@ abstract class AppStyles {
     fontWeight: FontWeight.w500,
     fontSize: 10.sp,
   );
+  static TextStyle styleMedium12 = TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: 12.sp,
+  );
   static TextStyle styleMedium24 = TextStyle(
     fontWeight: FontWeight.w500,
     fontSize: 24.sp,
@@ -72,15 +83,5 @@ abstract class AppStyles {
     fontSize: 20.sp,
   );
 
-  static OutlineInputBorder outLineInputBorder({
-    Color? borderSideColor,
-    BorderRadius? borderRadius,
-  }) {
-    return OutlineInputBorder(
-      borderRadius: borderRadius ?? const BorderRadius.all(Radius.circular(8)),
-      borderSide: BorderSide(
-        color: borderSideColor ?? AppColors.blue,
-      ),
-    );
-  }
+ 
 }

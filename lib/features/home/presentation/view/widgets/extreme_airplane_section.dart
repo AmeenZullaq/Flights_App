@@ -1,8 +1,8 @@
 import 'package:flights_app/core/reusable_widgets/flight_search_input.dart';
 import 'package:flights_app/core/utils/constants/app_colors.dart';
 import 'package:flights_app/core/utils/constants/app_images.dart';
+import 'package:flights_app/core/utils/constants/app_routes.dart';
 import 'package:flights_app/core/utils/constants/app_shadows.dart';
-import 'package:flights_app/core/utils/constants/route_views.dart';
 import 'package:flights_app/core/utils/helper_functions/get_bottom_sheet.dart';
 import 'package:flights_app/core/reusable_widgets/app_button.dart';
 import 'package:flights_app/core/reusable_widgets/app_container.dart';
@@ -87,7 +87,7 @@ class ExtremeAirplaneSection extends StatelessWidget {
           AppButton(
             text: 'Find tour',
             onTap: () {
-              Navigator.pushNamed(context, RouteViews.airToursResultView);
+              Navigator.pushNamed(context, Routes.airToursResultView);
             },
           ),
         ],

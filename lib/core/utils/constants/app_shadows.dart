@@ -37,4 +37,12 @@ abstract class AppShadows {
       color: const Color(0xFF101828).withOpacity(0.06),
     ),
   ];
+  static List<BoxShadow> ticketShadow = [
+    BoxShadow(
+      blurRadius: 64,
+      spreadRadius: -12,
+      offset: const Offset(0, 32),
+      color: const Color(0xFF101828).withOpacity(0.20),
+    ),
+  ];
 }

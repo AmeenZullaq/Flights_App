@@ -1,6 +1,6 @@
 import 'package:flights_app/core/reusable_widgets/padding.dart';
 import 'package:flights_app/core/utils/constants/app_images.dart';
-import 'package:flights_app/core/utils/constants/route_views.dart';
+import 'package:flights_app/core/utils/constants/app_routes.dart';
 import 'package:flights_app/core/utils/constants/app_styles.dart';
 import 'package:flights_app/features/flights_search_result/presentation/views/widgets/flight_rating.dart';
 import 'package:flights_app/features/flights_search_result/presentation/views/widgets/airfield_name.dart';
@@ -18,7 +18,7 @@ class AirTour extends StatelessWidget {
       children: [
         GestureDetector(
           onTap: () {
-            Navigator.pushNamed(context, RouteViews.airTourDetailsView);
+            Navigator.pushNamed(context, Routes.airTourDetailsView);
           },
           child: Container(
             width: double.infinity,
